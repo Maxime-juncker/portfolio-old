@@ -1,38 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+
+:root
+{
+  --dark-grey: #1e1e1e;
+  --violet: #6C399F;
+
+}
+
+a
+{
+  color: white;
+  text-decoration: none;
+
+  border: solid 0px white;
+  transition: all .2s;
+}
+
+
+
 .App {
   text-align: center;
+  font-family: 'Titillium Web', sans-serif;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1
+{
+  color: white;
+  letter-spacing: 14px;
+  font-size: 4vw;
+  font-weight: 200;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Navbar
+{
+  z-index: 999;
+  position: fixed;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  height: 7vh;
+  width: 100%;
+  box-shadow: 0px 5px 5px rgb(47, 47, 47);
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Navbar a:hover
+{
+  border-bottom: solid 3px;
+}
+
+.Point-light
+{
+  min-height: 200px;
+  max-height: 600px;
+  height: 19vw;
+  min-width: 200px;
+  max-width: 700px;
+  width: 35vw;
+
+  /* background-color: var(--violet); */
+  opacity: .5;
+  z-index: 0;
+  border-radius: 9990px;
+  filter: blur(100px);
+  position: absolute;
+
+}
+
+/*  _   _   _____   ____     ___   */
+/* | | | | | ____| |  _ \   / _ \  */
+/* | |_| | |  _|   | |_) | | | | | */
+/* |  _  | | |___  |  _ <  | |_| | */
+/* |_| |_| |_____| |_| \_\  \___/  */
+
+
+.Hero {
+  background: linear-gradient(
+    var(--violet) 0vh,
+    var(--dark-grey) 35vh
+  );  
+  height: 120vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+
+.Header-img
+{
+  height : 100vh;
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+
+}
+
+.Hero h1
+{
+  z-index: 1;
+  user-select: none;
+  
+  margin: 0;
+  margin-top: 20vh;
+
+  color: white;
+  font-size: 10vw;
+  letter-spacing: 10px;
+  font-weight: normal;
+}
+
+.Hero h3
+{
+  z-index:1;
+  margin: 0;
+  user-select: none;
+
+  color: white;
+  font-size: 1.5vw;
+  letter-spacing: 4px;
+  font-weight: 300;
+}
+
+/*     _      ____     ___    _   _   _____  */
+/*    / \    | __ )   / _ \  | | | | |_   _| */
+/*   / _ \   |  _ \  | | | | | | | |   | |   */
+/*  / ___ \  | |_) | | |_| | | |_| |   | |   */
+/* /_/   \_\ |____/   \___/   \___/    |_|   */
+
+.About
+{
+  margin-top: 100px;
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: flex-start;
+}
+
+.Presentation
+{
+  z-index: 1;
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+
+.Presentation p
+{
+  margin: 0;
+  width: 70%;
+  
+  text-wrap: wrap;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+.Skills
+{
+  z-index: 1;
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Card-conterner
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap:10px
 }
+
+.Skill-card
+{
+
+  padding-inline: 10px;
+  padding-block: 5px;
+  border: solid 2px white;
+  border-radius: 20px;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.Skill-card img
+{
+  height: 100%;
+}
+
+.Skill-card h3
+{
+  color: white;
+  font-weight: 200;
+  font-size: 100%;
+}
+
+
+/* __        __   ___    ____    _  __ */
+/* \ \      / /  / _ \  |  _ \  | |/ / */
+/*  \ \ /\ / /  | | | | | |_) | | ' /  */
+/*   \ V  V /   | |_| | |  _ <  | . \  */
+/*    \_/\_/     \___/  |_| \_\ |_|\_\ */
+
+.Work
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Work h2
+{
+  width: 100%;
+  margin-left: 10vw;
+  color: white;
+  text-decoration: underline;
+  font-weight: 200;
+  text-align: left;
+}
+
+.Project-card
+{
+  margin: 15px;
+
+  width: 70vw;
+  max-width: 700px;
+  height: 30vh;
+  border: solid 2px white;
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.Project-card section
+{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Project-card h1
+{
+  text-align: left;
+  width: 100%;
+  font-size: 28px;
+  letter-spacing: 5px;
+
+  margin: 0;
+
+}
+
+.Project-card p
+{
+  font-size: 12px;
+  color: white;
+  text-wrap: wrap;
+  text-align: left;
+  width: 70%;
+}
+
+.Project-card article
+{
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-self: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.Project-card article img
+{
+  width: 10%;
+}
+
+.Project-card h3
+{
+  width: 100%;
+  color: white;
+
+  text-align: start;
+  font-weight: 100;
+  font-size: 12px;
+  margin: 0;
+}
+
+.Project-card img
+{
+  width: 100%;
+  max-width: 300px;
+}
+
+
+
+/*   ____    ___    _   _   _____      _       ____   _____  */
+/*  / ___|  / _ \  | \ | | |_   _|    / \     / ___| |_   _| */
+/* | |     | | | | |  \| |   | |     / _ \   | |       | |   */
+/* | |___  | |_| | | |\  |   | |    / ___ \  | |___    | |   */
+/*  \____|  \___/  |_| \_|   |_|   /_/   \_\  \____|   |_|   */
+
