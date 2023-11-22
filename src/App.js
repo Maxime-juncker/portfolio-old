@@ -3,7 +3,7 @@ import HeroImg from './Images/header-img.png'
 
 const violet = "#6C399F";
 const blue = "#306AFF";
-// const red = "#FF3055";
+const red = "#FF3055";
 
 function Navbar()
 {
@@ -41,15 +41,15 @@ function ProjectCard({src, title, description})
             <h3>get it on github</h3>
           </article>
         </section>
-        <img src={src} alt="The project img" />
+          <img src={src} alt="The project img" />
       </div>
     </>
   )
 }
 function PointLight({left, top, backgroundColor})
 {
-  left+="vw"
-  top+="vh"
+  left+="%"
+  top+="%"
 
   return (
     <div className="Point-light" style={{left,top,backgroundColor}}></div>
@@ -75,9 +75,9 @@ function App() {
         </section>
 
         <section className='About'>
-          <PointLight left={0} top={150} backgroundColor={blue}/>
-          <PointLight left={70} top={140} backgroundColor={blue}/>
-          <PointLight left={30} top={160} backgroundColor={blue}/>
+          <PointLight left={0} backgroundColor={blue}/>
+          <PointLight left={30} top={45} backgroundColor={blue}/>
+          <PointLight left={70} top={20} backgroundColor={blue}/>
           <div className="Presentation">
             <h1>ABOUT ME</h1>
             <p>
@@ -111,14 +111,22 @@ function App() {
         <section className='Work'>
           <h1>WORK</h1>
           <h2>MY LATEST PROJECT</h2>
+
           <ProjectCard src={require("./Images/Projects/Maximatron-screen.png")}
                        title="MAXIMATRON" description="A small todo list project with block based notes "/>
-          <ProjectCard src={require("./Images/Projects/Maximatron-screen.png")}
-                       title="MAXIMATRON" description="A small todo list project with block based notes "/>
-          <ProjectCard src={require("./Images/Projects/Maximatron-screen.png")}
-                       title="MAXIMATRON" description="A small todo list project with block based notes "/>
-          <ProjectCard src={require("./Images/Projects/Maximatron-screen.png")}
-                       title="MAXIMATRON" description="A small todo list project with block based notes "/>
+          <ProjectCard src={require("./Images/Projects/HumanSI-logo.png")}
+                       title="HUMANSI" 
+                       description="A small civilisation simulation project
+                       done for a competition.
+                       (very computer intensive)                       
+                       PS : project made with 4 friends "/>
+          <ProjectCard src={require("./Images/Projects/Pronout-screen.png")}
+                       title="MAXIMATRON" 
+                       description="A clone from the pronote app, but you can make a custom schedual to make seems like you have to eat early and so go before everyone else "/>
+          <PointLight left={70} top={20} backgroundColor={red}/>
+          <PointLight left={10} top={30} backgroundColor={red}/>
+
+         
         </section>
       </body>
     </div>  
