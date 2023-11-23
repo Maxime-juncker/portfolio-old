@@ -10,9 +10,10 @@ function Navbar()
 {
   return (
     <div className='Navbar'>
-      <a href="#TOP">ABOUT</a>
-      <a href="#TOP">WORKS</a>
-      <a href="#TOP">CONTACT</a>
+      <a href="#Hero">HOME</a>
+      <a href="#About">ABOUT</a>
+      <a href="#Work">WORKS</a>
+      <a href="#Contact">CONTACT</a>
     </div>
   )
 }
@@ -31,27 +32,26 @@ function SkillCard({src, content})
 
 function ProjectCard({src, title, description, tools})
 {
-  const [isEnable, setIsEnable] = React.useState(false);
-  const toogleInfo = (event) => {
-    const clickedElement = event.target.querySelector("#info");
-    if (clickedElement == null)
-    {
-      return;
-    }
-    setIsEnable(!isEnable);
-    console.log('Clicked element:', clickedElement);
+  // const [isEnable, setIsEnable] = React.useState(false);
+  // const toogleInfo = (event) => {
+  //   const clickedElement = event.target.querySelector("#info");
+  //   if (clickedElement == null)
+  //   {
+  //     return;
+  //   }
+  //   setIsEnable(!isEnable);
+  //   console.log('Clicked element:', clickedElement);
     
-  };
-    const ActiveClass = 'Active Info';
+  // };
+  //   const ActiveClass = 'Active Info';
     return(
     <>
-      <div className='Project-card' onMouseEnter={toogleInfo}
-      onMouseLeave={toogleInfo}>
+      <div className='Project-card'>
         <section>
-          <div id='info' className={isEnable ? {ActiveClass} : 'Info'}>
+          {/* <div id='info' className="Info">
             <h1>TOOL USED</h1>
             <p>{tools}</p>
-          </div>
+          </div> */}
           <h1>{title}</h1>
           <p>{description}</p>
           <article>
@@ -94,19 +94,17 @@ function App() {
       </header>
 
       <body>
-        <section className='Hero'>
+        <section className='Hero' id='Hero'>
           <img src={HeroImg} className='Header-img' alt='multiple devices'/>
           <PointLight left={10} top={60} backgroundColor={violet}/>
           <PointLight left={80} top={45} backgroundColor={violet}/>
           <PointLight left={25} top={10} backgroundColor={violet}/>
 
-          <Truc height={10 + "px"}></Truc>
-
           <h1>JUNCKER <br /> MAXIME</h1>
           <h3>SOFTWARE DEVELOPPER</h3>
         </section>
 
-        <section className='About'>
+        <section className='About' id='About'>
           <PointLight left={0} backgroundColor={blue}/>
           <PointLight left={30} top={45} backgroundColor={blue}/>
           <PointLight left={70} top={20} backgroundColor={blue}/>
@@ -140,7 +138,7 @@ function App() {
           </div>
         </section>
 
-        <section className='Work'>
+        <section className='Work' id='Work'>
           <h1>WORK</h1>
           <h2>MY LATEST PROJECT</h2>
 
@@ -161,7 +159,7 @@ function App() {
           <PointLight left={80} top={80} backgroundColor={red}/>
         </section>
 
-        <section>
+        <section id='Contact'>
           <h1>CONTACT</h1>
         </section>
       </body>
