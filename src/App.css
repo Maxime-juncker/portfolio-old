@@ -57,16 +57,16 @@ h1
 .Point-light
 {
   min-height: 200px;
-  max-height: 600px;
+  max-height: 700px;
   height: 19vw;
   min-width: 200px;
   max-width: 700px;
-  width: 35vw;
+  width: 19vw;
 
   /* background-color: var(--violet); */
   opacity: .5;
   border-radius: 9990px;
-  filter: blur(100px);
+  filter: blur(100vw);
   position: absolute;
 
 }
@@ -247,10 +247,13 @@ h1
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 30vh;
 }
 
 .Work h2
 {
+  z-index: 2;
+
   width: 100%;
   margin-left: 10vw;
   color: white;
@@ -261,21 +264,53 @@ h1
 
 .Project-card
 {
+  position: relative;
+  padding: 20px;
+
+  z-index: 2;
   margin: 15px;
 
   width: 70vw;
   max-width: 700px;
   height: 30vh;
   border: solid 2px white;
-
-  padding: 20px;
-
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   
+  transition: all .2s;
 }
+
+
+.Project-card .Info
+{
+  position: absolute;
+  padding: 20px;
+  background-color: black;
+  left: 0;
+  bottom:0;
+  width: 0%;
+  opacity: 0;
+  height: 87%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  transition: all .2s;
+}
+.Active
+{
+  width: 50%;
+  opacity: .9;
+}
+.Project-card .Info h1
+{
+  text-decoration: underline;
+}
+
+
 
 .Project-card section
 {

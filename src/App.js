@@ -1,5 +1,6 @@
 import './App.css';
 import HeroImg from './Images/header-img.png'
+import React from 'react';
 
 const violet = "#6C399F";
 const blue = "#306AFF";
@@ -28,12 +29,29 @@ function SkillCard({src, content})
   )
 }
 
-function ProjectCard({src, title, description})
+function ProjectCard({src, title, description, tools})
 {
+  const [isEnable, setIsEnable] = React.useState(false);
+  const toogleInfo = (event) => {
+    const clickedElement = event.target.querySelector("#info");
+    if (clickedElement == null)
+    {
+      return;
+    }
+    setIsEnable(!isEnable);
+    console.log('Clicked element:', clickedElement);
+    
+  };
+    const ActiveClass = 'Active Info';
     return(
     <>
-      <div className='Project-card'>
+      <div className='Project-card' onMouseEnter={toogleInfo}
+      onMouseLeave={toogleInfo}>
         <section>
+          <div id='info' className={isEnable ? {ActiveClass} : 'Info'}>
+            <h1>TOOL USED</h1>
+            <p>{tools}</p>
+          </div>
           <h1>{title}</h1>
           <p>{description}</p>
           <article>
@@ -46,6 +64,7 @@ function ProjectCard({src, title, description})
     </>
   )
 }
+
 function PointLight({left, top, backgroundColor})
 {
   left+="%"
@@ -55,6 +74,17 @@ function PointLight({left, top, backgroundColor})
     <div className="Point-light" style={{left,top,backgroundColor}}></div>
   );
 }
+
+function Truc({width, height, textjrhgeiojz})
+{
+  return (
+    <div style={{width, height}}>
+      <h1>{textjrhgeiojz}</h1>
+      <h1>te</h1>
+    </div>
+  );
+}
+
 
 function App() {
   return (
@@ -69,6 +99,8 @@ function App() {
           <PointLight left={10} top={60} backgroundColor={violet}/>
           <PointLight left={80} top={45} backgroundColor={violet}/>
           <PointLight left={25} top={10} backgroundColor={violet}/>
+
+          <Truc height={10 + "px"}></Truc>
 
           <h1>JUNCKER <br /> MAXIME</h1>
           <h3>SOFTWARE DEVELOPPER</h3>
@@ -118,19 +150,26 @@ function App() {
                        title="HUMANSI" 
                        description="A small civilisation simulation project
                        done for a competition.
-                       (very computer intensive)                       
-                       PS : project made with 4 friends "/>
+                       (very computer intensive)"/>
           <ProjectCard src={require("./Images/Projects/Pronout-screen.png")}
-                       title="MAXIMATRON" 
+                       title="PRONOUT" 
                        description="A clone from the pronote app, but you can make a custom schedual to make seems like you have to eat early and so go before everyone else "/>
           <PointLight left={70} top={20} backgroundColor={red}/>
-          <PointLight left={10} top={30} backgroundColor={red}/>
+          <PointLight left={10} top={5} backgroundColor={red}/>
+          <PointLight left={65} top={55} backgroundColor={red}/>
+          <PointLight left={0} top={70} backgroundColor={red}/>
+          <PointLight left={80} top={80} backgroundColor={red}/>
+        </section>
 
-         
+        <section>
+          <h1>CONTACT</h1>
         </section>
       </body>
     </div>  
   );
 }
 
+
+
 export default App;
+
