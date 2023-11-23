@@ -102,12 +102,10 @@ h1
 
 .Header-img
 {
-  overflow-x: hidden;
-
-  height : 100vh;
   position: absolute;
   pointer-events: none;
   user-select: none;
+  object-fit:scale-down;
 
 }
 
@@ -457,5 +455,12 @@ h1
   h1
   {
     font-size: 12vw;
+  }
+
+  .Project-card
+  {
+  flex-direction: column;
+  gap: 20px;
+
   }
 }
