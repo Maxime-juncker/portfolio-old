@@ -105,7 +105,8 @@ h1
   position: absolute;
   pointer-events: none;
   user-select: none;
-  object-fit:scale-down;
+  height: 90vh;
+  object-fit:contain;
 
 }
 
