@@ -75,16 +75,6 @@ function PointLight({left, top, backgroundColor})
   );
 }
 
-function Truc({width, height, textjrhgeiojz})
-{
-  return (
-    <div style={{width, height}}>
-      <h1>{textjrhgeiojz}</h1>
-      <h1>te</h1>
-    </div>
-  );
-}
-
 
 function App() {
   return (
@@ -95,10 +85,10 @@ function App() {
 
       <body>
         <section className='Hero' id='Hero'>
-          {/* <img src={HeroImg} className='Header-img' alt='multiple devices'/> */}
-          {/* <PointLight left={10} top={60} backgroundColor={violet}/>
+          <img src={HeroImg} className='Header-img' alt='multiple devices'/>
+          <PointLight left={10} top={60} backgroundColor={violet}/>
           <PointLight left={80} top={45} backgroundColor={violet}/>
-          <PointLight left={25} top={10} backgroundColor={violet}/> */}
+          <PointLight left={25} top={10} backgroundColor={violet}/>
 
           <h1>JUNCKER <br /> MAXIME</h1>
           <h3>SOFTWARE DEVELOPPER</h3>
@@ -152,11 +142,11 @@ function App() {
           <ProjectCard src={require("./Images/Projects/Pronout-screen.png")}
                        title="PRONOUT" 
                        description="A clone from the pronote app, but you can make a custom schedual to make seems like you have to eat early and so go before everyone else "/>
-          {/* <PointLight left={70} top={20} backgroundColor={red}/>
+          <PointLight left={70} top={20} backgroundColor={red}/>
           <PointLight left={10} top={5} backgroundColor={red}/>
           <PointLight left={65} top={55} backgroundColor={red}/>
           <PointLight left={0} top={70} backgroundColor={red}/>
-          <PointLight left={80} top={80} backgroundColor={red}/> */}
+          <PointLight left={80} top={80} backgroundColor={red}/>
         </section>
 
         <section id='Contact'>
