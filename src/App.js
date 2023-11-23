@@ -113,11 +113,9 @@ function App() {
           <h2>MY LATEST PROJECT</h2>
           <ProjectCard src={require("./Images/Projects/Maximatron-screen.png")}
                        title="MAXIMATRON" description="A small todo list project with block based notes "/>
-          <ProjectCard src={require("./Images/Projects/Maximatron-screen.png")}
-                       title="MAXIMATRON" description="A small todo list project with block based notes "/>
-          <ProjectCard src={require("./Images/Projects/Maximatron-screen.png")}
-                       title="MAXIMATRON" description="A small todo list project with block based notes "/>
-          <ProjectCard src={require("./Images/Projects/Maximatron-screen.png")}
+          <ProjectCard src={require("./Images/Projects/HumanSI-logo.png")}
+                       title="PRONOUT" description="A small todo list project with block based notes "/>
+          <ProjectCard src={require("./Images/Projects/Pronout-screen.png")}
                        title="MAXIMATRON" description="A small todo list project with block based notes "/>
         </section>
       </body>
