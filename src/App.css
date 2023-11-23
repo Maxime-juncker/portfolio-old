@@ -459,6 +459,7 @@ h1
 
   .Project-card
   {
+    height: auto;
   flex-direction: column;
   gap: 20px;
 
