@@ -95,7 +95,7 @@ function App() {
 
       <body>
         <section className='Hero' id='Hero'>
-          <img src={HeroImg} className='Header-img' alt='multiple devices'/>
+          {/* <img src={HeroImg} className='Header-img' alt='multiple devices'/> */}
           <PointLight left={10} top={60} backgroundColor={violet}/>
           <PointLight left={80} top={45} backgroundColor={violet}/>
           <PointLight left={25} top={10} backgroundColor={violet}/>
