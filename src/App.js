@@ -93,8 +93,8 @@ function App() {
           <ProjectCard src={require("./Images/Projects/HumanSI-screen.png")}
                        title="HumanSI" 
                        description="Human Simulation"
-                       logo={require("./Images/Projects/HumanSI-Logo.png")}/>
-          <ProjectCard src={require("./Images/Projects/Prnoute-screen.png")}
+                       logo={require("./Images/Projects/HumanSI-logo.png")}/>
+          <ProjectCard src={require("./Images/Projects/Pronoute-screen.png")}
                        title="Pronout" 
                        description="Mobile App"
                        logo={require("./Images/Projects/Pronoute_logo.png")}/>
