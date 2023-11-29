@@ -1,4 +1,6 @@
 import './App.css';
+import PointLight from './Components/PointLight';
+import ProjectCard from './Components/ProjectCard';
 import HeroImg from './Images/header-img.png'
 import React from 'react';
 
@@ -30,52 +32,6 @@ function SkillCard({src, content})
   )
 }
 
-function ProjectCard({src, title, description, tools})
-{
-  // const [isEnable, setIsEnable] = React.useState(false);
-  // const toogleInfo = (event) => {
-  //   const clickedElement = event.target.querySelector("#info");
-  //   if (clickedElement == null)
-  //   {
-  //     return;
-  //   }
-  //   setIsEnable(!isEnable);
-  //   console.log('Clicked element:', clickedElement);
-    
-  // };
-  //   const ActiveClass = 'Active Info';
-    return(
-    <>
-      <div className='Project-card'>
-        <section>
-          {/* <div id='info' className="Info">
-            <h1>TOOL USED</h1>
-            <p>{tools}</p>
-          </div> */}
-          <h1>{title}</h1>
-          <p>{description}</p>
-          <article>
-            <img src={require("./Images/Cards/github.svg").default} alt="The github logo" />
-            <h3>get it on github</h3>
-          </article>
-        </section>
-          <img src={src} alt="The project img" />
-      </div>
-    </>
-  )
-}
-
-function PointLight({left, top, backgroundColor})
-{
-  left+="%"
-  top+="%"
-
-  return (
-    <div className="Point-light" style={{left,top,backgroundColor}}></div>
-  );
-}
-
-
 function App() {
   return (
     <div className="App">
@@ -96,8 +52,7 @@ function App() {
 
         <section className='About' id='About'>
           <PointLight left={0} backgroundColor={blue}/>
-          <PointLight left={30} top={45} backgroundColor={blue}/>
-          <PointLight left={70} top={20} backgroundColor={blue}/>
+          <PointLight left={65} top={20} backgroundColor={blue}/>
           <div className="Presentation">
             <h1>ABOUT ME</h1>
             <p>
@@ -133,20 +88,22 @@ function App() {
           <h2>MY LATEST PROJECT</h2>
 
           <ProjectCard src={require("./Images/Projects/Maximatron-screen.png")}
-                       title="MAXIMATRON" description="A small todo list project with block based notes "/>
-          <ProjectCard src={require("./Images/Projects/HumanSI-logo.png")}
-                       title="HUMANSI" 
-                       description="A small civilisation simulation project
-                       done for a competition.
-                       (very computer intensive)"/>
-          <ProjectCard src={require("./Images/Projects/Pronout-screen.png")}
-                       title="PRONOUT" 
-                       description="A clone from the pronote app, but you can make a custom schedual to make seems like you have to eat early and so go before everyone else "/>
+                       title="The Maximatron" description="Desktop development"
+                       logo={require("./Images/Projects/Maximatron-logo.png")}/>
+          <ProjectCard src={require("./Images/Projects/HumanSI-screen.png")}
+                       title="HumanSI" 
+                       description="Human Simulation"
+                       logo={require("./Images/Projects/HumanSI-Logo.png")}/>
+          <ProjectCard src={require("./Images/Projects/Prnoute-screen.png")}
+                       title="Pronout" 
+                       description="Mobile App"
+                       logo={require("./Images/Projects/Pronoute_logo.png")}/>
           <PointLight left={70} top={20} backgroundColor={red}/>
           <PointLight left={10} top={5} backgroundColor={red}/>
           <PointLight left={65} top={55} backgroundColor={red}/>
           <PointLight left={0} top={70} backgroundColor={red}/>
           <PointLight left={80} top={80} backgroundColor={red}/>
+
         </section>
 
         <section id='Contact'>
