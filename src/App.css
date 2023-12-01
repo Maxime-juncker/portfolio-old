@@ -275,7 +275,7 @@ h1
   flex-direction: column;
   gap: 0;
   margin: 20px;
-  max-width: 1000px;
+  width: 50vw;
   transition: all .5s;
 }
 
@@ -290,8 +290,8 @@ h1
   text-align: left;
   background-color: var(--dark-grey);
 
-  border-end-end-radius: 40px;
-  border-end-start-radius: 40px;
+  border-end-end-radius: 20px;
+  border-end-start-radius: 20px;
 }
 
 .Project-card article
@@ -309,14 +309,6 @@ h1
   font-size: large;
   letter-spacing: 1px;
   font-weight: 500;
-}
-.Project-card h3
-{
-  margin: 0;
-
-  color: #A4A4A4;
-  font-size: small;
-  font-weight: 400;
 }
 
 .Project-card section img
@@ -384,6 +376,39 @@ h1
   scale: 1.05;
 }
 
+.Project-card h3
+{
+  position: relative;
+  margin: 0;
+
+  color: #A4A4A4;
+  font-size: small;
+  font-weight: 400;
+  transition: all .2s;
+
+}
+.Project-card h3::before
+{
+  position: absolute;
+  
+  color: #A4A4A4;
+  font-size: small;
+  font-weight: 400;
+  opacity: 0;
+  content: "View Project --";
+  transition: all .2s;
+}
+.Project-card:hover h3::before
+{
+  opacity: 1;
+  transform: translateX(400px);
+}
+
+.Project-card:hover h3
+{
+  top: 0;
+  transform: translateX(-400px);
+}
 /* ********************************************************* */
 /* ********************************************************* */
 
@@ -457,4 +482,16 @@ h1
     font-size: 12vw;
   }
 
+  .Project-card
+  {
+    z-index: 2;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 20px;
+    width: 80vw;
+    transition: all .5s;
+  }
 }
