@@ -1,12 +1,14 @@
 import './App.css';
 import PointLight from './Components/PointLight';
 import ProjectCard from './Components/ProjectCard';
+import { ContactForm } from './Components/ContactForm';
 import HeroImg from './Images/header-img.png'
 import React from 'react';
 
 const violet = "#6C399F";
 const blue = "#306AFF";
 const red = "#FF3055";
+const green = "#387256";
 
 function Navbar()
 {
@@ -106,15 +108,24 @@ function App() {
 
         </section>
 
-        <section id='Contact'>
+        <section id='Contact' className='Contact'>
           <h1>CONTACT</h1>
+          <section>
+            <article className='Contact-card'>
+              <ContactForm/>
+            </article>
+          </section>
+          <PointLight left={80} top={80} backgroundColor={green}/>
+          <PointLight left={0} top={0} backgroundColor={green}/>
+          <PointLight left={10} top={50} backgroundColor={green}/>
+
+        
         </section>
+
       </body>
     </div>  
   );
 }
-
-
 
 export default App;
 

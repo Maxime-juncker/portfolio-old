@@ -5,6 +5,7 @@
 {
   --dark-grey: #1e1e1e;
   --violet: #6C399F;
+  --green: #387256;
 
 }
 
@@ -83,10 +84,7 @@ h1
 /* ********************************************************* */
 
 .Hero {
-  background: linear-gradient(
-    var(--violet) 0vh,
-    var(--dark-grey) 35vh
-  );  
+
   overflow-x: hidden;
 
   height: 120vh;
@@ -173,7 +171,8 @@ h1
 {
   margin: 0;
   width: 70%;
-  
+  font-size: calc(.5vw + 16px);
+  text-align: left;
   text-wrap: wrap;
   color: white;
 }
@@ -209,7 +208,7 @@ h1
   padding-block: 5px;
   border: solid 2px white;
   border-radius: 20px;
-  height: 20px;
+  height: 3vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -297,10 +296,12 @@ h1
 .Project-card article
 {
   margin-left: 5%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+
 }
 
 .Project-card h1
@@ -380,6 +381,7 @@ h1
 {
   position: relative;
   margin: 0;
+  width: 100%;
 
   color: #A4A4A4;
   font-size: small;
@@ -421,6 +423,126 @@ h1
 /* ********************************************************* */
 /* ********************************************************* */
 
+.Contact
+{
+  width: 100%;
+  position: relative;
+}
+.Contact section
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.Contact-card
+{
+  z-index: 1;
+  width: 30vw;
+  height: auto;
+  margin-bottom: 20vh;
+  padding-block: 20px;
+  padding-inline:60px;
+
+  border-radius: 20px;
+  background-color: var(--dark-grey);
+}
+
+.Contact-Item
+{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+}
+.Contact-Item h1
+{
+  
+  margin: 0;
+  text-align: left;
+  width: 100%;
+  letter-spacing: normal;
+  font-weight: 400;
+  font-size: medium;
+}
+.Contact input
+{
+  width: 100%;
+  padding:10px;
+  background-color: var(--dark-grey);
+  border: solid 2px var(--green);
+  border-radius: 10px;
+  color: white;
+}
+.Contact input:focus
+{
+  outline: none;
+}
+
+.Contact textarea
+{
+  padding: 10px;
+  resize: none;
+  width: 100%;
+  height: 40vh;
+  background-color: var(--dark-grey);
+  border: solid 2px var(--green);
+  border-radius: 10px;
+  color: white;
+  outline: none;
+}
+
+.Contact button
+{
+  overflow: hidden;
+  position: relative;
+  color: white;
+  margin-top: 20px;
+  background-color: var(--green);
+  border: none;
+  padding-block: 15px;
+  padding-inline: 100px;
+  font-size: 20px;
+  border-radius: 6px;
+  transition: all .2s;
+}
+
+.Contact button::before
+{
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  rotate: 20deg;
+  
+  height: 150%;
+  width: 1px;
+  background-color: white;
+  opacity: 0;
+
+  transition: all .5s;
+}
+@keyframes enable {
+  0%   { opacity: .7 }
+  50%  { width: 10%; }
+  90% { left: 150%;}
+  100% { width: 0%;left: 100%; }
+}
+.Contact button:hover::before
+{
+  animation: enable 300ms ease-in-out forwards;
+}
+.Contact button:hover
+{
+  scale: 1.1;
+}
+ @keyframes submit {
+  0%   { scale: .8; }
+  50% { scale: 1.3; background-color: #5cad86; }
+  100% { scale: 1;}
+} 
 
 
 
@@ -493,5 +615,10 @@ h1
     margin: 20px;
     width: 80vw;
     transition: all .5s;
+  }
+
+  .Contact-card
+  {
+    width: 80vw;
   }
 }
