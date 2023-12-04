@@ -37,13 +37,11 @@ function SkillCard({src, content})
 function App() {
   return (
     <div className="App">
-      <header>
-        <Navbar/>
-      </header>
-
       <body>
+      <Navbar/>
+
         <section className='Hero' id='Hero'>
-          <img src={HeroImg} className='Header-img' alt='multiple devices'/>
+          {/* <img src={HeroImg} className='Header-img' alt='multiple devices'/> */}
           <PointLight left={10} top={60} backgroundColor={violet}/>
           <PointLight left={80} top={45} backgroundColor={violet}/>
           <PointLight left={25} top={10} backgroundColor={violet}/>
@@ -81,6 +79,8 @@ function App() {
               <SkillCard content={"VISUAL STUDIO"} src={require("./Images/Cards/visual-studio.svg").default}/>
               <SkillCard content={"RIDER"} src={require("./Images/Cards/jetbrains.svg").default}/>
               <SkillCard content={"GITHUB"} src={require("./Images/Cards/github.svg").default}/>
+              <SkillCard content={"XAMARIN"} src={require("./Images/Cards/xamarin.svg").default}/>
+              <SkillCard content={"AVALONIA UI"} src={require("./Images/Cards/avalonia.svg").default}/>
             </div>
           </div>
         </section>
