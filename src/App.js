@@ -2,9 +2,8 @@ import './App.css';
 import PointLight from './Components/PointLight';
 import ProjectCard from './Components/ProjectCard';
 import { ContactForm } from './Components/ContactForm';
-import HeroImg from './Images/header-img.png'
-import React from 'react';
-
+import * as React from 'react';
+import { Link } from 'react-router-dom';
 const violet = "#6C399F";
 const blue = "#306AFF";
 const red = "#FF3055";
@@ -18,6 +17,7 @@ function Navbar()
       <a href="#About">ABOUT</a>
       <a href="#Work">WORKS</a>
       <a href="#Contact">CONTACT</a>
+      <Link to="/Page/PronoutPage">About</Link>
     </div>
   )
 }
@@ -89,17 +89,17 @@ function App() {
           <h1>WORK</h1>
           <h2>MY LATEST PROJECT</h2>
 
-          <ProjectCard src={require("./Images/Projects/Maximatron-screen.png")}
+          <ProjectCard src={require("./Images/Projects/Maximatron/Maximatron-screen.png")}
                        title="The Maximatron" description="Desktop development"
-                       logo={require("./Images/Projects/Maximatron-logo.png")}/>
-          <ProjectCard src={require("./Images/Projects/HumanSI-screen.png")}
+                       logo={require("./Images/Projects/Maximatron/Maximatron-logo.png")}/>
+          <ProjectCard src={require("./Images/Projects/HumanSI/HumanSI-screen.png")}
                        title="HumanSI" 
                        description="Human Simulation"
-                       logo={require("./Images/Projects/HumanSI-logo.png")}/>
-          <ProjectCard src={require("./Images/Projects/Pronoute-screen.png")}
+                       logo={require("./Images/Projects/HumanSI/HumanSI-logo.png")}/>
+          <ProjectCard src={require("./Images/Projects/Pronout/Pronoute-screen.png")}
                        title="Pronout" 
                        description="Mobile App"
-                       logo={require("./Images/Projects/Pronoute_logo.png")}/>
+                       logo={require("./Images/Projects/Pronout/Pronoute_logo.png")}/>
           <PointLight left={70} top={20} backgroundColor={red}/>
           <PointLight left={10} top={5} backgroundColor={red}/>
           <PointLight left={65} top={55} backgroundColor={red}/>
