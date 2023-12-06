@@ -1,0 +1,93 @@
+:root
+{
+  --dark-grey: #1e1e1e;
+  --violet: #6C399F;
+  --green: #387256;
+  --red: #cc435e
+}
+img
+{
+    z-index: 1;
+
+}
+
+.Project-about
+{
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 80vh;
+    color: white;
+}
+
+.Project-about h1
+{
+    letter-spacing: normal;
+    z-index: 2;
+
+}
+
+.Content
+{
+    margin-top: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.Summary
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 5%;
+    gap: 5%;
+
+}
+.Summary article div
+{
+    width: 70%;
+
+}
+
+h2 
+{
+    text-align: left;
+    font-weight: bold;
+
+}
+p 
+{
+    text-align: left;
+    text-wrap: wrap;
+    line-height: 25px
+
+}
+
+.screenshot-contener
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    width: 100%;
+
+    backdrop-filter: blur(100px);
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+}
+.screenshot-contener img
+{
+    width: 100%;
+}
+
+

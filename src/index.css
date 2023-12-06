@@ -1,8 +1,9 @@
 body {
   background-color: var(--dark-grey);
+  color: white;
   overflow-x: hidden;
   margin: 0;
-  height:700vh;
+  z-index: inherit;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;

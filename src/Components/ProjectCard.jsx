@@ -1,10 +1,14 @@
-import React, { Component } from 'react'
+import { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export default class ProjectCard extends Component {
+  
   render() {
-    const {src, title, description, logo} = this.props;
+    const {src, title, description, logo, nav} = this.props;
+
     return(
-        <div className='Project-card'>
+      
+        <Link to={nav} className='Project-card'>
           <img src={src} alt="" />
           <section>
             <article>
@@ -13,7 +17,7 @@ export default class ProjectCard extends Component {
             </article>
             <img src={logo} alt="" />
           </section>
-        </div>
+        </Link>
       )
   }
 }
