@@ -3,45 +3,32 @@ import PointLight from './Components/PointLight';
 import ProjectCard from './Components/ProjectCard';
 import { ContactForm } from './Components/ContactForm';
 import * as React from 'react';
-import { Link } from 'react-router-dom';
+import { BrowserRouter as Route, Routes, Link, BrowserRouter } from "react-router-dom";
+
+
+
 const violet = "#6C399F";
 const blue = "#306AFF";
 const red = "#FF3055";
 const green = "#387256";
 
-function Navbar()
+const About = () =>
 {
   return (
-    <div className='Navbar'>
-      <a href="#Hero">HOME</a>
-      <a href="#About">ABOUT</a>
-      <a href="#Work">WORKS</a>
-      <a href="#Contact">CONTACT</a>
-      <Link to="/Page/PronoutPage">About</Link>
+    <div>
+      <h1>ABOUT</h1>
     </div>
-  )
+  );
 }
 
-function SkillCard({src, content})
+function Home() 
 {
-  return(
-    <>
-      <div className='Skill-card'>
-        <img src={src} alt='tkt'/>
-        <h3>{content}</h3>
-      </div>
-    </>
-  )
-}
-
-function App() {
   return (
     <div className="App">
       <body>
       <Navbar/>
 
         <section className='Hero' id='Hero'>
-          {/* <img src={HeroImg} className='Header-img' alt='multiple devices'/> */}
           <PointLight left={10} top={60} backgroundColor={violet}/>
           <PointLight left={80} top={45} backgroundColor={violet}/>
           <PointLight left={25} top={10} backgroundColor={violet}/>
@@ -91,7 +78,8 @@ function App() {
 
           <ProjectCard src={require("./Images/Projects/Maximatron/Maximatron-screen.png")}
                        title="The Maximatron" description="Desktop development"
-                       logo={require("./Images/Projects/Maximatron/Maximatron-logo.png")}/>
+                       logo={require("./Images/Projects/Maximatron/Maximatron-logo.png")}
+                       />
           <ProjectCard src={require("./Images/Projects/HumanSI/HumanSI-screen.png")}
                        title="HumanSI" 
                        description="Human Simulation"
@@ -124,6 +112,50 @@ function App() {
 
       </body>
     </div>  
+  );
+}
+
+function Navbar()
+{
+  return (
+    <div className='Navbar'>
+      <a href="#Hero">HOME</a>
+      <a href="#About">ABOUT</a>
+      <a href="#Work">WORKS</a>
+      <a href="#Contact">CONTACT</a>
+    </div>
+  )
+}
+
+function SkillCard({src, content})
+{
+  return(
+    <>
+      <div className='Skill-card'>
+        <img src={src} alt='tkt'/>
+        <h3>{content}</h3>
+      </div>
+    </>
+  )
+}
+
+function App() {
+  return(
+    <BrowserRouter>
+      <div>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/about">About</Link>
+        </li>
+
+        <Routes>
+          <Route path="/about" element={<About/>}/>
+          <Route path="/" element={<Home/>}/>
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
