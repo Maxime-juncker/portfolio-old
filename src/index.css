@@ -19,4 +19,6 @@ code {
 
 body::-webkit-scrollbar {
   display: none;
+  overflow-x: hidden;
+
 }
