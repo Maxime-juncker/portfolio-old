@@ -270,7 +270,7 @@ h1
 
 .Project-card
 {
-  z-index: 2;
+  z-index: 1;
   overflow: hidden;
   position: relative;
   display: flex;
@@ -284,7 +284,7 @@ h1
 .Project-card section
 {
   height: 80px;
-  z-index: 1;
+  z-index: 99;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -334,13 +334,17 @@ h1
   content: "";
   bottom: 10px;
   right: 140%;
-  
+    
+  opacity: 99000;
   height: 150%;
   width: 80px;
   rotate: 20deg;
   position: absolute;
   background-color: white;
   opacity: .3;
+
+  z-index: 2;
+
 
   transition: all .6s;
 }
@@ -356,6 +360,8 @@ h1
   position: absolute;
   background-color: white;
   opacity: .5;
+
+  z-index: 2;
 
   transition: all .5s;
 }
@@ -392,6 +398,7 @@ h1
   transition: all .2s;
 
 }
+
 .Project-card h3::before
 {
   position: absolute;
