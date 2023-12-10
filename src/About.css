@@ -10,6 +10,10 @@ img
     z-index: 1;
 
 }
+body
+{
+    height: auto;
+}
 
 .Project-about
 {
@@ -96,6 +100,13 @@ p
 .screenshot-contener img
 {
     width: 100%;
+}
+.Features
+{
+    width: 100%;
+    text-align: left;
+    margin-top: 50px;
+    margin-left: 10%;
 }
 
 @media (max-width: 740px)

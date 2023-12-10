@@ -437,7 +437,7 @@ h1
 .Contact
 {
   width: 100%;
-  position: relative;
+  /* position: relative; */
 }
 .Contact section
 {
