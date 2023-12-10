@@ -27,8 +27,8 @@ img
 {
     letter-spacing: normal;
     z-index: 2;
-
 }
+
 
 .Content
 {
@@ -47,13 +47,21 @@ img
     align-items: center;
     padding-inline: 5%;
     gap: 5%;
-
+    z-index: 1;
 }
-.Summary article div
+.Summary article
 {
-    width: 70%;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
 }
+.Card-conterner
+{
+    justify-content: flex-start;
+    width: 50%;
+}
+
 
 h2 
 {
@@ -65,8 +73,8 @@ p
 {
     text-align: left;
     text-wrap: wrap;
-    line-height: 25px
-
+    line-height: 25px;
+    margin-bottom: 60px;
 }
 
 .screenshot-contener
@@ -90,4 +98,15 @@ p
     width: 100%;
 }
 
+@media (max-width: 740px)
+{
+    .Summary
+    {
+        flex-direction: column;
+    }
+    .screenshot-contener
+    {
+        margin-top: 120px;
+    }
 
+}

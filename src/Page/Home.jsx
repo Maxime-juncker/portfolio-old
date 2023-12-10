@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PointLight from '../Components/PointLight';
 import ProjectCard from '../Components/ProjectCard';
+import SkillCard from '../Components/SkillCard';
 import { ContactForm } from '../Components/ContactForm';
 
 const violet = "#6C399F";
@@ -20,22 +21,11 @@ function Navbar()
   )
 }
 
-function SkillCard({src, content})
-{
-  return(
-    <>
-      <div className='Skill-card'>
-        <img src={src} alt='tkt'/>
-        <h3>{content}</h3>
-      </div>
-    </>
-  )
-}
-
 class Home extends Component {
     render() {
+      
         return (
-            <div className="App">
+            <body className="App">
               <Navbar/>
         
                 <section className='Hero' id='Hero'>
@@ -119,7 +109,7 @@ class Home extends Component {
                   <PointLight left={0} top={0} backgroundColor={green}/>
                   <PointLight left={10} top={50} backgroundColor={green}/>               
                 </section>
-            </div>  
+            </body>  
           );
     }
 }
