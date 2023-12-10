@@ -92,7 +92,7 @@ h1
 
   background-image: url("Images/header-img.png");
   background-position: center;
-  background-size: contain;
+  background-size:  cover;
   background-repeat: no-repeat;
 }
 
