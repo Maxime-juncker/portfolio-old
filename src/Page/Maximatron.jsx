@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import PointLight from '../Components/PointLight';
 import SkillCard from '../Components/SkillCard';
-
+import { Link } from 'react-router-dom';
 
 class Maximatron extends Component {
     render() {
         return (
             <body>                
             <header className='Project-about'>
+            <Link className='link' style={{zIndex: 1, width:"100%",textAlign:"left", marginLeft:"5vw",
+                    textDecoration: "underline" ,fontSize: "24px"}}
+                     to="/home">← Go Back</Link>
                 <img src={require("../Images/Projects/Maximatron/Maximatron-logo.png")} alt="Maximatron logo" />
                 <h1>THE MAXIMATRON</h1>
                 <h1 style={{position: 'absolute', bottom: "3vh", fontSize: "24px"}}>SROLL</h1>
