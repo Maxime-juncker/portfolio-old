@@ -8,8 +8,8 @@ class NotFound extends Component {
     render() {
         return (
             <div className='Not-found'>
-                <Link className='link' style={{zIndex: 1,
-                    textDecoration: "underline" ,position: 'absolute', top:"5%", left: "5%", fontSize: "24px"}}
+            <Link className='link' style={{zIndex: 1, width:"100%",textAlign:"left", marginLeft:"5vw",
+                    textDecoration: "underline" ,fontSize: "24px"}}
                      to="/home">← Go Back</Link>
                 <h1 style={{zIndex: 10}}>404 <br /> Not Found</h1>
                 <h1 style={{zIndex: 10, rotate: "25deg", position: 'absolute', top: "0", left: "30%"}} >:’(</h1>
