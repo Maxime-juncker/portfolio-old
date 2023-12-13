@@ -22,8 +22,6 @@ const About = () =>
 function App() {
   return(
     <BrowserRouter>
-      <body>
-      <ScrollToTop />
         <Routes>
           <Route index element={<Home/>}/>
           <Route path="/home" element={<Home/>}/>
@@ -31,8 +29,7 @@ function App() {
           <Route path="/maximatron" element={<Maximatron/>}/>
           <Route path="*" element={<NotFound/>}/>
         </Routes>
-      </body>
-    </BrowserRouter>
+      </BrowserRouter>
   );
 }
 

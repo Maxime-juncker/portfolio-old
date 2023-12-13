@@ -105,9 +105,9 @@ class Home extends Component {
                       <ContactForm/>
                     </article>
                   </section>
-                  <PointLight left={80} top={80} backgroundColor={green}/>
-                  <PointLight left={0} top={0} backgroundColor={green}/>
-                  <PointLight left={10} top={50} backgroundColor={green}/>               
+                    <PointLight left={80} top={80} backgroundColor={green}/>
+                    <PointLight left={0} top={0} backgroundColor={green}/>
+                    <PointLight left={10} top={50} backgroundColor={green}/>               
                 </section>
             </body>  
           );
